@@ -2,6 +2,7 @@ import { getProfile } from "@/sanity/sanity.query";
 import type { ProfileType } from "@/types";
 import HeroSvg from "./(site)/icons/HeroSvg";
 import Job from "@/app/(site)/components/Job";
+import Project from "@/app/projects/page";
 
 export default async function Home() {
   const profile: ProfileType[] = await getProfile();
@@ -38,6 +39,7 @@ export default async function Home() {
         <HeroSvg />
       </section>
       <Job />
+      <Project />
     </main>
   );
 }
